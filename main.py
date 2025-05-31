@@ -21,7 +21,7 @@ from sklearn.model_selection import train_test_split  #for splitting data into t
 from sklearn.linear_model import LogisticRegression # for logistic regression model
 from sklearn.metrics import classification_report, confusion_matrix  # For model performance
 
-#Aasiya 
+
 
 #Loading and preparing the data 
 
@@ -34,8 +34,6 @@ X = X / 16.0 # simply normalizing the original pixel values which is  from 0 to 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) 
  #Spliting the dataset into training and testing sets (80% train, 20% test)
 
-#Rania
-
 
 model = LogisticRegression(max_iter=1000) # Creating a logistic regression model with more iterations
 model.fit(X_train, y_train)   # Train the model using the training data
@@ -44,11 +42,11 @@ model.fit(X_train, y_train)   # Train the model using the training data
 
 y_pred = model.predict(X_test) # Predict the labels of the test set , it returns a list of predicted labels for each item in X_test.
 
-#Aasiya
+
 
 print("Classification Report:\n", classification_report(y_test, y_pred))
 
-#Uroosa
+
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 
 # Visualizing predictions on random test images
